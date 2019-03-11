@@ -268,6 +268,8 @@ blue:((float)(rgbValue & 0xFF)) / 255.0 alpha:1.0]
 -(void)textDidChange
 {
     
+    NSString *  contentStr = [self.inputTextView.text stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    
     if (self.inputTextView.text.length == 0) {
         self.sendButton.userInteractionEnabled = NO;
         [self.sendButton setBackgroundColor:ColorWithRGB(0XBFBFBF)];
